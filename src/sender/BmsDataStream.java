@@ -98,8 +98,8 @@ public class BmsDataStream {
 	public static void main(String[] arg) {
 		Method method;
 		try {
-			method = BmsDataStream.class.getMethod(FUNC_LIST.get(arg[0]), String.class);
-			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(arg[0]));
+			method = BmsDataStream.class.getMethod(FUNC_LIST.get(arg.length ==1? arg[0]: "R"), String.class);
+			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(arg.length ==1? arg[0]: "R"));
 		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException e) {
 			logger.log(Level.SEVERE, e.getMessage());
