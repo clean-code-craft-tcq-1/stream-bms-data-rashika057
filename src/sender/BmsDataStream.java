@@ -38,7 +38,7 @@ public class BmsDataStream {
 	}
 
 	public static void sendRandomParamList(String maxCount) {
-		int count = 0;
+		int count = 1;
 		boolean stop = false;
 		int maxCountNumber = NumberUtils.toInt(maxCount);
 		while (!(maxCountNumber > 0 ? count == maxCountNumber : Boolean.FALSE)) {
@@ -97,9 +97,10 @@ public class BmsDataStream {
 
 	public static void main(String[] arg) {
 		Method method;
+		String dataGenerationType = arg.length >0 ? arg[0] : "R";
 		try {
-			method = BmsDataStream.class.getMethod(FUNC_LIST.get(arg.length ==1? arg[0]: "R"), String.class);
-			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(arg.length ==1? arg[0]: "R"));
+			method = BmsDataStream.class.getMethod(FUNC_LIST.get(dataGenerationType), String.class);
+			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(dataGenerationType));
 		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException e) {
 			logger.log(Level.SEVERE, e.getMessage());
