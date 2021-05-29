@@ -1,0 +1,124 @@
+[
+{
+    "temperature": 15.23,
+    "soc": 59.92
+},
+
+{
+    "temperature": 2.16,
+    "soc": 6.37
+},
+
+{
+    "temperature": 36.56,
+    "soc": 13.96
+},
+
+{
+    "temperature": 98.68,
+    "soc": 46.43
+},
+{
+    "temperature": 78.03,
+    "soc": 45.86
+},
+
+{
+    "temperature": 41.26,
+    "soc": 35.22
+},
+
+{
+    "temperature": 32.65,
+    "soc": 96.65
+},
+
+{
+    "temperature": 3.73,
+    "soc": 44.08
+},
+
+{
+    "temperature": 85.82,
+    "soc": 22.31
+},
+
+{
+    "temperature": 25.95,
+    "soc": 48.06
+},
+
+{
+    "temperature": 59.34,
+    "soc": 20.85
+},
+
+{
+    "temperature": 41.65,
+    "soc": 39.71
+},
+
+{
+    "temperature": 5.48,
+    "soc": 70.73
+},
+
+{
+    "temperature": 95.62,
+    "soc": 61.34
+},
+
+{
+    "temperature": 22.63,
+    "soc": 72.09
+},
+
+{
+    "temperature": 28.26,
+    "soc": 67.07
+},
+
+{
+    "temperature": 4.56,
+    "soc": 54.61
+},
+
+{
+    "temperature": 51.49,
+    "soc": 25.86
+},
+
+{
+    "temperature": 1.0,
+    "soc": 87.21
+},
+{
+    "temperature": 5.96,
+    "soc": 2.39
+},
+
+{
+    "temperature": 73.65,
+    "soc": 41.48
+},
+
+{
+    "temperature": 72.45,
+    "soc": 8.4
+},
+
+{
+    "temperature": 16.24,
+    "soc": 80.36
+},
+
+{
+    "temperature": 21.22,
+    "soc": 25.48
+},
+
+{
+    "temperature": 69.76,
+    "soc": 66.02
+}
+]
