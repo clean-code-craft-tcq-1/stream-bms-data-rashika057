@@ -39,9 +39,8 @@ public class BmsDataStream {
 
 	public static void sendRandomParamList(String maxCount) {
 		int count = 1;
-		boolean stop = false;
 		int maxCountNumber = NumberUtils.toInt(maxCount);
-		while (!(maxCountNumber > 0 ? count == maxCountNumber : Boolean.FALSE)) {
+		while (!(maxCountNumber > 0 ? count > maxCountNumber : Boolean.FALSE)) {
 			count++;
 			double temp = Math.round(Math.random() * (100) * 100.0) / 100.0;
 			double soc = Math.round(Math.random() * (100) * 100.0) / 100.0;
