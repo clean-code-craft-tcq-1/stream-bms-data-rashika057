@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "Receiver\Receiver.csproj", "{FEE88265-F86E-4746-94A9-24DF6DEB001F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver.Test", "Receiver.Test\Receiver.Test.csproj", "{5F7BA930-BDCC-4A2F-A714-723C97927CB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE88265-F86E-4746-94A9-24DF6DEB001F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE88265-F86E-4746-94A9-24DF6DEB001F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE88265-F86E-4746-94A9-24DF6DEB001F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE88265-F86E-4746-94A9-24DF6DEB001F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F7BA930-BDCC-4A2F-A714-723C97927CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7BA930-BDCC-4A2F-A714-723C97927CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7BA930-BDCC-4A2F-A714-723C97927CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7BA930-BDCC-4A2F-A714-723C97927CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80FC2A24-6D22-4CC2-8D41-2222240CA412}
+	EndGlobalSection
+EndGlobal
