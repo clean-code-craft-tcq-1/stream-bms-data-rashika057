@@ -17,6 +17,7 @@ import javax.json.JsonWriter;
 import javax.json.JsonWriterFactory;
 
 import org.apache.commons.lang3.math.NumberUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,7 +34,7 @@ public class BmsDataStream {
 		FUNC_LIST.put("F", "sendParamListFromFile");
 		FUNC_LIST.put("R", "sendRandomParamList");
 		FUNC_PARAM_LIST = new LinkedHashMap<>();
-		FUNC_PARAM_LIST.put("F", "src/resources/BatteryParameters.json");
+		FUNC_PARAM_LIST.put("F", ".src/resources/BatteryParameters.json");
 		FUNC_PARAM_LIST.put("R", "0");
 	}
 
@@ -96,7 +97,11 @@ public class BmsDataStream {
 
 	public static void main(String[] arg) {
 		Method method;
-		String dataGenerationType = arg.length >0 ? arg[0] : "R";
+		String dataGenerationType = arg.length >0 && !StringUtils.isNumeric(arg[0])? arg[0] : "R";
+		if(dataGenerationType.equals("R")){
+		String dataGenerationCount = arg.length == 1 && StringUtils.isNumeric(arg[0]) ? arg[0] : arg.length >1 ? arg[1]:"0";
+		FUNC_PARAM_LIST.put(dataGenerationType, dataGenerationCount);
+		}
 		try {
 			method = BmsDataStream.class.getMethod(FUNC_LIST.get(dataGenerationType), String.class);
 			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(dataGenerationType));
