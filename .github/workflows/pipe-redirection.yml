@@ -38,7 +38,7 @@ jobs:
        name: Package
        path: staging
     - name: Build Sender
-      run: javac -classpath . src/sender/BmsDataStream.java
+      run: javac -classpath ./target/*.jar src/sender/BmsDataStream.java
 
     # Run the app
     - name: Run the App
