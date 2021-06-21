@@ -24,21 +24,8 @@ jobs:
       with:
         java-version: 1.8
         
-    - name: Cache Maven packages
-      uses: actions/cache@v2
-      with:
-       path: ~/.m2
-       key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-       restore-keys: ${{ runner.os }}-m2
-    - name: Build with Maven
-      run: mvn --batch-mode --update-snapshots verify   
-    - run: mkdir staging && cp target/*.jar staging
-    - uses: actions/upload-artifact@v2
-      with:
-       name: Package
-       path: staging
     - name: Build Sender
-      run: javac -classpath "D:\a\stream-bms-data-rashika057\stream-bms-data-rashika057\target\*" src\sender\BmsDataStream.java
+      run: javac -cp "lib\*" src\sender\BmsDataStream.java
 
     # Run the app
     - name: Run the App
