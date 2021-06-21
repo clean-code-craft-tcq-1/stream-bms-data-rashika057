@@ -1,4 +1,4 @@
-name: Build and Run
+name: Pipe redirection
 
 on: [push, pull_request]
 
@@ -32,5 +32,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name:Build and run receiver
+    - name: Build and run receiver
       run: java -ea -classpath . sender.BmsDataStream F | dotnet run --project src\Receiver\Receiver\Receiver.csproj
