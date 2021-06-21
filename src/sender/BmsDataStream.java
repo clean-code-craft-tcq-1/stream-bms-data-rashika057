@@ -97,10 +97,13 @@ public class BmsDataStream {
 
 	public static void main(String[] arg) {
 		Method method;
-		String dataGenerationType = arg.length >0 && !StringUtils.isNumeric(arg[0])? arg[0] : "R";
-		if(dataGenerationType.equals("R")){
-		String dataGenerationCount = arg.length == 1 && StringUtils.isNumeric(arg[0]) ? arg[0] : arg.length >1 ? arg[1]:"0";
-		FUNC_PARAM_LIST.put(dataGenerationType, dataGenerationCount);
+		String dataGenerationType = "R";
+		if (arg.length == 1) {
+			if (!StringUtils.isNumeric(arg[0])) {
+				dataGenerationType = arg[0];
+			} else {
+				FUNC_PARAM_LIST.put(dataGenerationType, arg[0]);
+			}
 		}
 		try {
 			method = BmsDataStream.class.getMethod(FUNC_LIST.get(dataGenerationType), String.class);
