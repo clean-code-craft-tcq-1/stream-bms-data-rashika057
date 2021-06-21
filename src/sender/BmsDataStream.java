@@ -94,9 +94,18 @@ public class BmsDataStream {
 	public static void printToConsole(String jsonObject) {
 		System.out.println(jsonObject);
 	}
+	
+	private static void sendBmsParamStream(String dataGenerationType) {
+		try {
+			Method method = BmsDataStream.class.getMethod(FUNC_LIST.get(dataGenerationType), String.class);
+			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(dataGenerationType));
+		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
+				| InvocationTargetException e) {
+			logger.log(Level.SEVERE, e.getMessage());
+		}
+	}
 
 	public static void main(String[] arg) {
-		Method method;
 		String dataGenerationType = "R";
 		if (arg.length == 1) {
 			if (!StringUtils.isNumeric(arg[0])) {
@@ -104,14 +113,8 @@ public class BmsDataStream {
 			} else {
 				FUNC_PARAM_LIST.put(dataGenerationType, arg[0]);
 			}
-		}
-		try {
-			method = BmsDataStream.class.getMethod(FUNC_LIST.get(dataGenerationType), String.class);
-			method.invoke(BmsDataStream.class, FUNC_PARAM_LIST.get(dataGenerationType));
-		} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException e) {
-			logger.log(Level.SEVERE, e.getMessage());
-		}
-
+		}		
+		sendBmsParamStream(dataGenerationType);
+		
 	}
 }
