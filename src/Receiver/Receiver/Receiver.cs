@@ -5,11 +5,12 @@ namespace Receiver
 {
     class Receiver
     {
+        static BatteryParameters parameters;
         static void Main(string[] args)
         {
             string readParameter;
             List<string> inputParameters = new List<string>();
-            BatteryParameters parameters;
+            
             int i = 1;
             while ((readParameter = Console.ReadLine()) != null)
             {
@@ -26,14 +27,14 @@ namespace Receiver
 
                     parameters = parameterStatistics.GetMinimumValues(batteryParameters);
                     Console.WriteLine("Minimum of soc " + parameters.StateOfCharge + " and minimum of temperature " + parameters.Temperature);
-                    PrintAverage(batteryParameters, parameterStatistics, parameters);
+                    PrintAverage(batteryParameters, parameterStatistics);
                     i = 1;
                     inputParameters.Clear();
                 }
             }
         }
 
-        private static BatteryParameters PrintAverage(List<BatteryParameters> batteryParameters, ParameterStatistics parameterStatistics, BatteryParameters parameters)
+        private static BatteryParameters PrintAverage(List<BatteryParameters> batteryParameters, ParameterStatistics parameterStatistics)
         {
             if (batteryParameters.Count > 5)
             {
