@@ -71,4 +71,9 @@ Output on console will be :
 {"temperature":37.73,"soc":10.08}
 ......
 
+C:\Projects\git\git\stream-bms-data-rashika057\src\sender>javac -classpath C:\Users\hus8kor\Desktop\reference_jars\javax.json-api-1.1-sources.jar;C:\Users\hus8kor\Desktop\reference_jars\json-20160810.jar;C:\Users\hus8kor\Desktop\reference_jars\json-simple-1.1.1.jar;C:\Users\hus8kor\Desktop\reference_jars\javax.json-1.1.jar;C:\Users\hus8kor\Desktop\reference_jars\commons-lang3-3.0.jar; sender\BmsDataStream.java
+
+C:\Projects\git\git\stream-bms-data-rashika057\src\sender>javac sender\BmsReceiver.java 
+
+C:\Projects\git\git\stream-bms-data-rashika057\src\sender>java -classpath .;C:\Users\hus8kor\Desktop\reference_jars\javax.json-api-1.1-sources.jar;C:\Users\hus8kor\Desktop\reference_jars\json-20160810.jar;C:\Users\hus8kor\Desktop\reference_jars\json-simple-1.1.1.jar;C:\Users\hus8kor\Desktop\reference_jars\javax.json-1.1.jar;C:\Users\hus8kor\Desktop\reference_jars\commons-lang3-3.0.jar; sender.BmsDataStream | java sender.BmsReceiver
 
