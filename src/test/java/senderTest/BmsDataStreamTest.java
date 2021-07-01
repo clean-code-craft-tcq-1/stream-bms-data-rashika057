@@ -1,4 +1,4 @@
-package test.java.senderTest;
+package senderTest;
 
 
 import static org.junit.Assert.assertTrue;
