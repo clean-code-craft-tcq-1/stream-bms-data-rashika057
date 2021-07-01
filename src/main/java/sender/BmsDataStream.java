@@ -1,4 +1,4 @@
-package sender;
+package main.java.sender;
 
 import java.io.FileReader;
 import java.io.IOException;
