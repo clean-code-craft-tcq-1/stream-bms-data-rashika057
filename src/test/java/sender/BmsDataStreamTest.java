@@ -1,4 +1,4 @@
-package sender;
+package test.java.sender;
 
 
 import static org.junit.Assert.assertTrue;
@@ -19,7 +19,7 @@ import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
-import sender.BmsDataStream;
+import main.java.sender.BmsDataStream;
 
 public class BmsDataStreamTest {
 
